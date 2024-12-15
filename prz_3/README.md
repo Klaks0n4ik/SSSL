@@ -4,21 +4,19 @@
 
 ## Подготовка стенда, создание виртуальных машин
 
-![](./screenshots/Подготовка\ стенда.png)
+![](./screenshots/Подготовка_стенда.png)
 
 ## Установка сервера Wazuh
 
-![](./screenshots/Установка\ wazuh\ server\ .png)
+![](./screenshots/Установка_wazuh_server.png)
 
-![](./screenshots/03-dashboard.png)
+![](./screenshots/Главное_меню_при_входе.png)
 
 ## Установка агента Wazuh
 
-![](./screenshots/04-agent-install.png)
+![](./screenshots/Установка_агента_1.png)
 
-![](./screenshots/05-agent.png)
-
-![](./screenshots/06-agent.png)
+![](./screenshots/Установка_агента_2.png)
 
 ## Подключенный агент в дашборде
 
@@ -26,74 +24,59 @@
 
 ## Найденные уязвимости в конфигурации по умолчанию
 
-![](./screenshots/08-default-alerts.png)
+![](./screenshots/Дефолтные_вулны_в_агенте.png)
 
 ## Настройка проверки целостности файлов
 
-![](./screenshots/09-filecheck.png)
+![](./screenshots/Изменение_проверки_файлов.png)
 
-![](./screenshots/10-restart.png)
+![](./screenshots/Перезагрузка_агента_с_правилом.png)
 
 ### Изменение конфигурационного файла `/etc/hosts`
 
-![](./screenshots/11-edit-hosts.png)
+![](./screenshots/Изменение_файла_хостс.png)
 
 ### Срабатывание правила
 
-![](./screenshots/12-file-alert.png)
+![](./screenshots/Алерт_на_изменение_файла.png)
 
 ## Настройка проверки уязвимостей
 
-![](./screenshots/13-vulncheck.png)
+![](./screenshots/Насйтрока_проверки_уязвимостей.png)
 
 ## Настройка выявления скрытых процессов
 
 ### Установка необходимых пакетов
 
-![](./screenshots/14-prepare-for-rootkit.png)
+![](./screenshots/Скачивание_необходимых_пакетов.png)
 
 ### Настройка мониторинга процессов в агенте Wazuh
 
-![](./screenshots/15-configure-rootcheck.png)
+![](./screenshots/Настройка_проверки_процессов.png)
 
 ### Сборка и запуск руткита
 
-![](./screenshots/16-compile.png)
+![](./screenshots/Установка_руткита.png)
 
-![](./screenshots/17-rootkit.png)
-
-### Использование руткита для скрытия процесса
-
-![](./screenshots/18-hide-proc.png)
-
-### Срабатывание правила
-
-![](./screenshots/19-alert.png)
+### На данном этапе произошла ошибка.
+### К сожалению, данный пункт задания выполнить не удалось, так как не удавалось запустить нужное ПО для проверки правила.
 
 ## Настройка выявления SQL-инъекций
 
 ### Установка веб-сервера Apache
 
-![](./screenshots/20-install-apache.png)
-
-![](./screenshots/21-apache-installed.png)
-
-![](./screenshots/22-apache-works.png)
+![](./screenshots/Установленный_апач.png)
 
 ### Конфигурация мониторинга логов Apache
 
-![](./screenshots/23-enable-log-analysis.png)
-
-### Демонстрационная атака
-
-![](./screenshots/24-sqli.png)
+![](./screenshots/Правило_скули.png)
 
 ### Срабатывание правила
 
-![](./screenshots/25-alert.png)
+![](./screenshots/Результат_скуль_индж.png)
 
 ## Проверка выявления атаки Shellshock
 
-![](./screenshots/26-shellshock.png)
+![](./screenshots/атака_шелшок.png)
 
-![](./screenshots/27-alert.png)
+![](./screenshots/результат_атаки_шелшок.png)
