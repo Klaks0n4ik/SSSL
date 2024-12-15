@@ -2,33 +2,27 @@
 
 Выполнил Мерзликин Максим, ББМО-01-23
 
-Для работы были использованы уже ранее созданные в [ПРЗ №3](../prz-3/) стенды Wazuh.
-
-![](./screenshots/vmconnect_y3LMvKk6CP.png)
+Для работы были использованы уже ранее созданные в [ПРЗ №3](../prz_3/) стенды Wazuh.
 
 ## Установка и настройка IDS Suricata
 
-Добавление репозиториев `suricata` в пакетный менеджер `apt`:
+Установка IDS Suricata:
 
-![](./screenshots/vmconnect_hskFtg5UVw.png)
-
-Установка IDS Suricata из репозитория:
-
-![](./screenshots/vmconnect_ZZo0CtHTpK.png)
+![](./screenshots/installing_suricata.png)
 
 Загрузка правил обнаружения:
 
-![](./screenshots/vmconnect_Ife4jPHgOj.png)
+![](./screenshots/install_rules_suricata.png)
 
 Настройка переменных конфигурации в файле `/etc/suricata/suricata.yaml`:
 
-![](./screenshots/vmconnect_oRYm2H4QQO.png)
+![](./screenshots/suricata_yaml_config.png)
 
 Настройка импорта логов Suricata в Wazuh и перезапуск агента:
 
-![](./screenshots/vmconnect_4TojIz78qH.png)
+![](./screenshots/wazuh_rule_suricata.png)
 
-![](./screenshots/vmconnect_FAs9COnmz6.png)
+![](./screenshots/new_rule_wazuh_restart.png)
 
 ## Установка и настройка Yara
 
@@ -36,76 +30,54 @@
 
 Загрузка и распаковка дистрибутива:
 
-![](./screenshots/vmconnect_UwvIipoUNf.png)
+![](./screenshots/Yara_download.png)
 
 Установка Yara:
 
-![](./screenshots/vmconnect_liQg8VBizk.png)
+![](./screenshots/yara_install.png)
 
-![](./screenshots/vmconnect_jWnCNrKs6O.png)
+![](./screenshots/yara_install_2.png)
 
-![](./screenshots/vmconnect_Q5oqdrJrLv.png)
+![](./screenshots/yara_install_3_and_problem.png)
 
 Загрузка YARA-правил:
 
-![](./screenshots/vmconnect_WAHiNucv27.png)
+![](./screenshots/yara_rules_install.png)
 
 Создание скрипта `yara.sh` для Wazuh и установка корректных привилегий согласно документации:
 
-![](./screenshots/vmconnect_48PLim48iG.png)
+![](./screenshots/yara_rule_make.png)
 
-Настройка правил мониторинга в файле `/var/ossec/etc/ossec.conf`, перезапуск агента:
+Настройка правил мониторинга в файле `/var/ossec/etc/ossec.conf`:
 
-![](./screenshots/vmconnect_z0cpgX3Lf8.png)
-
-![](./screenshots/vmconnect_JqYOFah7j9.png)
+![](./screenshots/wazuh_agent_rule.png)
 
 ### Настройка сервера
 
 Настройка правил Wazuh для отслеживания изменений и срабатывания правил YARA:
 
-![](./screenshots/WindowsTerminal_x83ampQmD3.png)
+![](./screenshots/wazuh_server_rule.png)
 
 Настройка декодера результатов сканирования Yara:
 
-![](./screenshots/WindowsTerminal_jb97X8Qtde.png)
+![](./screenshots/wazuh_server_rule2.png)
 
 Настройка команд Wazuh, который будут запускать сканирование при обнаружении изменений в отслеживаемой директории:
 
-![](./screenshots/WindowsTerminal_EduUSQI5El.png)
-
-Завершение конфигурации, перезапуск сервера Wazuh:
-
-![](./screenshots/WindowsTerminal_gEW9JQ64tu.png)
+![](./screenshots/wazuh_commands.png)
 
 ## Эмуляция атаки
 
 Для осуществления атак в гипервизоре также была развёрнута виртуальная машина с Kali Linux:
 
-![](./screenshots/explorer_mvpRr5dgF2.png)
+![](./screenshots/kali_for_test.png)
 
 Для проверки работы IDS Suricata было запущено сканирование защищаемого узла сканером веб-уязвимостей `nuclei`:
 
-![](./screenshots/vmconnect_WJXVKX9AGd.png)
+![](./screenshots/nuclei.png)
 
-События, созданные IDS Suricata:
+События, созданные IDS Suricata, выяглядят в логах следующим образом:
 
-![](./screenshots/uLpS4k5Wn6.png)
+![](./screenshots/suricata_match.png)
 
-Эти события также можно отфильтровать, например, вывести только попытки эксплуатации уязвимостей (по тегу правила Suricata `ET EXPLOIT`).
 
-![](./screenshots/firefox_2QKh2VMFhT.png)
-
-Для проверки работы Yara средством `msfvenom` был создан реверс-шелл.
-
-![](./screenshots/vmconnect_IhDHCM77l3.png)
-
-Загрузка и запуск исполняемого файла:
-
-![](./screenshots/vmconnect_pvyaWZyImR.png)
-
-![](./screenshots/vmconnect_xpxHkjjOYH.png)
-
-Сработка Yara-правила в Wazuh:
-
-![](./screenshots/firefox_V9BuShkulF.png)
