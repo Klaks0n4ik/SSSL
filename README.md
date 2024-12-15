@@ -5,7 +5,7 @@
 ## Содержание
 
 - [ПРЗ №1. Сбор логов](./prz_1/)
-- [ПРЗ №2. Анализ логов](./prz_2/log-analysis.ipynb)
+- [ПРЗ №2. Анализ логов](./prz_2/lab2_.ipynb)
 - [ПРЗ №3. Wazuh](./prz_3/)
 - [ПРЗ №4. Network Threat Hunting](./prz_4/)
 - [ПРЗ №5. Threat Hunting](./prz_5/)
