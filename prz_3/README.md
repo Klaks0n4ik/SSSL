@@ -4,11 +4,11 @@
 
 ## Подготовка стенда, создание виртуальных машин
 
-![](./screenshots/Подготовка стенда.png)
+![](./screenshots/Подготовка\ стенда.png)
 
 ## Установка сервера Wazuh
 
-![](./screenshots/Установка wazuh server .png)
+![](./screenshots/Установка\ wazuh\ server\ .png)
 
 ![](./screenshots/03-dashboard.png)
 
