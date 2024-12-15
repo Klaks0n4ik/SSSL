@@ -4,29 +4,31 @@
 
 ## Развёрнутый стенд
 
-![](./screenshots/O5LtNqZrDi.png)
+![](./screenshots/stand_ready.png)
 
 ## Первое задание, импорт логов
 
-![](./screenshots/vmware_Cs0KczI5SU.png)
+![](./screenshots/lab_1_import.png)
 
-![](./screenshots/firefox_fzxflXZgHn.png)
+![](./screenshots/import_logs_2.png)
 
 ## Информация о подключениях
 
-![](./screenshots/BKh7p0XRGd.png)
+![](./screenshots/info_about_connetcions.png)
 
 В ходе просмотра подключений, совершённых с хоста 192.168.99.51, установлено, что единственным подозрительным соединением является подключение к IP-адресу 104.248.234.238. Остальные соединения осущетсвляются к сервисам Microsoft, являющиеся легитимными, поэтому их можно добавить в Safelist.
 
 ### Добавление легитимных узлов в Safelist
 
-![](./screenshots/firefox_bdQkYSMwrS.png)
+![](./screenshots/safelist.png)
 
-![](./screenshots/firefox_qJGVUokyjI.png)
+### Остается один нелегитимный адрес:
+
+![](./screenshots/only_one_address.png)
 
 ### Анализ HTTP-логов
 
-![](./screenshots/vmware_BYVtK7ns0G.png)
+![](./screenshots/http_logs.png)
 
 Все 3011 подключений, совершённых с подозрительного IP, являются HTTP-запросами по длинному обфусцированному URL. Также принимая во внимание, то, что:
 
@@ -37,22 +39,22 @@
 
 ## Задание 2, импорт логов
 
-![](./screenshots/vmware_JWFhIw9Ir3.png)
+![](./screenshots/import_lab_2.png)
 
 ### Анализ DNS-запросов
 
-![](./screenshots/firefox_DUsaK5ys05.png)
+![](./screenshots/dns.png)
 
-![](./screenshots/firefox_DXy71mkBqU.png)
+![](./screenshots/dns_2.png)
 
 Можно увидеть большое количество DNS-запросов к домену `honestimnotevil.com`, в том числе поддоменам, состоящим из длинных hex-строк. Вероятно, эти подключения использовались для осуществления C2 через DNS.
 
 ## Задание 3, импорт логов
 
-![](./screenshots/vmware_RmRN30GD0R.png)
+![](./screenshots/import_lab_3.png)
 
 Можно увидеть подозрительное соединение с узлом `skypetm.com.tw`. Этот домен не относится к компании Microsoft, но пытается быть похожим на официальный ресурс, связанный с средством ВКС Skype. Вероятно он используется злоумышленниками, в чём можно убедиться, проанализировав URL в сервисе Virustotal.
 
-![](./screenshots/firefox_q2gIbJXlFo.png)
+![](./screenshots/skype_malware.png)
 
-![](./screenshots/firefox_2G6u3VtP9L.png)
+![](./screenshots/virustotal.png)
