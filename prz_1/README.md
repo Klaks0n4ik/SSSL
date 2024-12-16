@@ -6,69 +6,49 @@
 
 ### Установка `rsyslog` на сервер
 
-![](screenshots/01-install-rsyslog-server.png)
+![](screenshots/Установка_rsyslog.png)
 
-![](screenshots/02-rsyslog-running.png)
+![](screenshots/active_rsyslog.png)
 
 ### Настройка модулей `rsyslog`
 
-![](screenshots/03-load-modules.png)
+![](screenshots/rsyslog_config.png)
 
 ### Добавление правил обработки логов
 
-![](screenshots/04-add-ruleset.png)
-
-### Применение конфигурации `rsyslog`
-
-![](screenshots/05-apply-config.png)
+![](screenshots/rsyslog_config_2.png)
 
 ### Установка `rsyslog` на клиент
 
-![](screenshots/06-install-rsyslog-client.png)
+![](screenshots/rsyslog_install_client.png)
 
-![](screenshots/07-client-rsyslog-running.png)
+![](screenshots/active_rsyslog_client.png)
 
 ### Добавление правила пересылки логов на сервер
 
-![](screenshots/08-add-client-rule.png)
-
-### Применение конфигурации `rsyslog`
-
-![](screenshots/09-apply-client-config.png)
+![](screenshots/rule_client_rsyslog.png)
 
 ### Просмотр полученных логов на сервере
 
-![](screenshots/10-logs-recieved.png)
+![](screenshots/ssh_logs.png)
 
 ## Grafana Loki
 
-### Загрузка compose-файла от разработчика
-
-![](screenshots/11-download-loki-compose.png)
-
 ### Редактирование compose-файла с целью отключения компонента `promtail` на сервере
 
-![](screenshots/12-edit-compose.png)
+![](screenshots/loki_grafana_config.png)
 
 ### Запуск Loki
 
-![](screenshots/13-start-loki.png)
+![](screenshots/loki_grafana_install.png)
 
 ### Редактирование конфигурации `promtail` на клиенте
 
-![](screenshots/14-promtail-config.png)
-
-### comopose-файл для `promtail`
-
-![](screenshots/15-promtail-compose.png)
-
-### Запуск `promtail` на клиенте
-
-![](screenshots/16-start-promtail.png)
+![](screenshots/comfig_and_docker_yaml.png)
 
 ### Просмотр логов клиента в Grafana
 
-![](screenshots/17-viewing-logs.png)
+![](screenshots/работает.png)
 
 ## Signoz
 
@@ -76,24 +56,21 @@
 
 Установка согласно https://signoz.io/docs/install/docker/#install-signoz-using-docker-compose
 
-![](screenshots/18-start-signoz.png)
+![](screenshots/signoz_install.png)
 
 ### Рабочая панель Signoz
 
-![](screenshots/19-open-signoz.png)
+![](screenshots/signoz_menu.png)
 
 ### Редактирование конфигурации клиентского приложения для отправки данных в Signoz
 
 Используемое приложение - https://github.com/SigNoz/sample-nodejs-app/
 
-![](screenshots/20-update-compose-client.png)
-
 ### Запуск клиентского приложения
 
-![](screenshots/21-start-client.png)
+![](screenshots/docker_node_js.png)
 
 ### Информация о приложении в Signoz
 
-![](screenshots/22-dashboards.png)
+![](screenshots/work_signoz.png)
 
-![](screenshots/23-traces.png)
